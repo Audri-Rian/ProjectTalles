@@ -30,7 +30,7 @@ public class Restaurante {
     @JoinColumn(name= "categoria_id")
     private Categoria categoria;
 
-    public Restaurante() {
+    public Restaurante(int i) {
     }
 
     public Restaurante(Categoria categoria, Endereco endereco, String horaFuncionamento, int id, String nome, boolean retirada, String telefone) {

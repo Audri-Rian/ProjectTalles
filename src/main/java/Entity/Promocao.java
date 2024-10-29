@@ -11,7 +11,7 @@ public class Promocao implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column(length = 100, nullable = false)
     private String nome;
@@ -29,12 +29,12 @@ public class Promocao implements Serializable {
     private String tipo;
 
 
-    public Promocao() {
+    public Promocao(int i) {
     }
 
     public Promocao(String codigo, long id, String nome, String tipo, LocalDateTime validade, double valor) {
         this.codigo = codigo;
-        this.id = id;
+        this.id = (int) id;
         this.nome = nome;
         this.tipo = tipo;
         this.validade = validade;
@@ -49,11 +49,11 @@ public class Promocao implements Serializable {
         this.codigo = codigo;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

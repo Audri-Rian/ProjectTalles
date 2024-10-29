@@ -12,7 +12,7 @@ public class Endereco implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Especifica que o banco de dados será responsável por gerar o valor da chame primaria automaticamente
-    private long id;                                    //a medida que os registros são inserido.
+    private int id;                                     //a medida que os registros são inserido.
 
     @Column(length = 255, nullable = false)             //Quantidade de caracteres e notnull.
     private String rua;
@@ -34,18 +34,20 @@ public class Endereco implements Serializable {
     @JoinColumn(name="promocao_id")
     private Promocao promocao;
 
-    public Endereco() {
+    public Endereco(int i) {
     }
 
-    public Endereco(String bairro, String CEP, String cidade, String estado, long id, Promocao promocao, String rua) {
+    public Endereco(String bairro, String CEP, String cidade, String estado, int id, Promocao promocao, String rua) {
         this.bairro = bairro;
         this.CEP = CEP;
         this.cidade = cidade;
         Estado = estado;
-        this.id = id;
+        this.id = (int) id;
         this.promocao = promocao;
         this.rua = rua;
     }
+
+
 
     public String getBairro() {
         return bairro;
@@ -79,12 +81,12 @@ public class Endereco implements Serializable {
         Estado = estado;
     }
 
-    public long getId() {
-        return id;
+    public int getId() {
+        return (int) id;
     }
 
     public void setId(long id) {
-        this.id = id;
+        this.id = (int) id;
     }
 
     public Promocao getPromocao() {

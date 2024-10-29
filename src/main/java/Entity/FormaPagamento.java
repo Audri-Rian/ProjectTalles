@@ -21,6 +21,9 @@ public class FormaPagamento {
         this.tipo_de_pagamento = tipo_de_pagamento;
     }
 
+    public FormaPagamento(int i) {
+    }
+
     public int getId() {
         return id;
     }

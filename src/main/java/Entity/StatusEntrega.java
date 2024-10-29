@@ -13,7 +13,7 @@ public class StatusEntrega {
     @Column(length = 50,nullable = false)
     private String nome;
 
-    public StatusEntrega() {
+    public StatusEntrega(int i) {
     }
 
     public StatusEntrega(int id, String nome) {

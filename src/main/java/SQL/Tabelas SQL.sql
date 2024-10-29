@@ -1,3 +1,0 @@
-use ifood;
-
-show tables

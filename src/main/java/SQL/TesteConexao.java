@@ -9,10 +9,10 @@ public class TesteConexao {
         try {
             conn = ConexaoMySQL.conectar();
             if (conn != null) {
-                System.out.println("Conexão estabelecida com sucesso!");
+                System.out.println("Pode conectar patrão");
             }
         } catch (SQLException e) {
-            System.out.println("Falha ao estabelecer conexão: " + e.getMessage());
+            System.out.println("Vai entrar n men: " + e.getMessage());
         } finally {
             ConexaoMySQL.fechar(conn);
         }

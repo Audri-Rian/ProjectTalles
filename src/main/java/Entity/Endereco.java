@@ -1,13 +1,13 @@
 package Entity;
-import jakarta.persistence.*;
-
+import jakarta.persistence.*;//É utilizado para fazer o mapeamento objeto-relacional, você fornece os dados relacionais, -
+                             // permitindo que você os manipule diretamente sem precisar fazer o codigo SQL diretamente.
 import java.io.Serializable; //Informa que os objetos dessa carai de classe pode ser serializado ou desserializados
                              //Serializado é o processo de um objeto ser convertido em um formato que possa ser armazenado ou transmitido
                              //Imagina que você pode armazenar um objeto em um arquivo, para isso, nos temos que implementar o Serializable
 
 @Entity                      //Estou transformando Endereco em uma entidade da tabela
 @Table
-public class Endereco implements Serializable {
+public class Endereco extends Base implements Serializable  {
                              //"private transient String senha" caso um campo não deva ser serializado usamos o transient
 
     @Id

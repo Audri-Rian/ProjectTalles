@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table
-public class ProdutoAcompanhamento {
+public class ProdutoAcompanhamento extends Base{
 
     @ManyToOne
     @JoinColumn(name = "id_produto")

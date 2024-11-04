@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class FormaPagamento {
+public class FormaPagamento extends Base {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

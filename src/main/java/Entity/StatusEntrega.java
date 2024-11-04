@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class StatusEntrega {
+public class StatusEntrega extends Base {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table
-public class Promocao implements Serializable {
+public class Promocao extends Base implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

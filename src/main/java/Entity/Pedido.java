@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table
-public class Pedido {
+public class Pedido extends Base{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

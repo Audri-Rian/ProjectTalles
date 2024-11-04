@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class Acompanhamento {
+public class Acompanhamento extends Base {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
